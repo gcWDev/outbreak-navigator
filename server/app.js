@@ -8,10 +8,12 @@ app.use(cors());
 app.use(express.static("public"));
 
 const places = require("./routes/places");
+const comments = require("./routes/comments");
 const port = process.env.PORT;
 
-app.use("/api", places);
+app.use("/api/places", places);
+app.use("/api/comments", comments);
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}...`);
+    console.log(`Listening on port ${port}...`);
 });

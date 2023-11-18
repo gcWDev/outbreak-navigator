@@ -1,3 +1,5 @@
+@import url("../index.css");
+
 .infoWindowContainer {
     max-width: 300px;
     max-height: 400px;
@@ -7,4 +9,103 @@
 
 .infoWindowContainer img {
     max-height: 200px;
+}
+
+.modalContainer {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.modalContainer::-webkit-scrollbar {
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 10px;
+}
+
+.modalContainer::-webkit-scrollbar-track {
+    background: var(--secondary);
+    border-radius: 100vw;
+    margin-block: 0.5em;
+}
+
+.modalContainer::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 100vw;
+    border: 0.1em solid var(--secondary);
+}
+
+.modalContainer::-webkit-scrollbar-thumb:hover {
+    opacity: 0.5;
+}
+.modalContainer::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comment > p {
+    position: relative;
+    background-color: #0084ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    width: fit-content;
+}
+
+.messageMetadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.modalContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 400px;
+    border: 2px solid #000;
+    box-shadow: var(--box-shadow);
+    padding: 2rem 4rem;
+    border-radius: 10px;
+}
+
+.submitContainer {
+    box-sizing: content-box;
+    height: 23px;
+    border-radius: 5px;
+    border: thin solid #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16.5px 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submitContainer > svg {
+    width: 16px;
+    height: 16px;
+    transition: all 0.3s;
+}
+
+.submitContainer:hover {
+    border: thin solid #0084ff;
+}
+
+.submitContainer:hover > svg {
+    fill: #0084ff;
+    transform: scale(1.3);
 }

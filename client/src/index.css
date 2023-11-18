@@ -52,3 +52,7 @@ ul {
 body > reach-portal > div {
     z-index: 5 !important;
 }
+
+p {
+    margin-bottom: 0;
+}
