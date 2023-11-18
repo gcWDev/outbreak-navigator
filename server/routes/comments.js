@@ -7,7 +7,8 @@ const {
     postCommentsByIdController,
 } = require("../controllers/postCommentsByIdController");
 
-router.route("/get-comments").get(getCommentsByIdController);
+router.route("/get-comments").post(getCommentsByIdController);
+
 router.route("/post-comments").post(postCommentsByIdController);
 
 module.exports = router;

@@ -3,11 +3,11 @@ const { pool } = require("../config/db");
 async function getCommentsByPlaceId(placeId) {
     try {
         const comments = await pool.query(
-            "select comment from comments where place_id = ?",
+            "select * from comments where place_id = ?",
             [placeId]
         );
 
-        return comments[0][0];
+        return comments[0];
     } catch (error) {
         console.error(error);
         throw error;
@@ -16,7 +16,7 @@ async function getCommentsByPlaceId(placeId) {
 
 async function postCommentByPlaceId(userInput) {
     try {
-        const query = `insert into comments (place_id, comment) values(?, ?);`;
+        const query = `insert into comments (place_id, comment, name) values(?, ?, ?);`;
 
         pool.query(query, userInput);
         return { success: true };

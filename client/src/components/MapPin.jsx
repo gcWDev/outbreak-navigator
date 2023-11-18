@@ -1,11 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AdvancedMarker, InfoWindow } from "@vis.gl/react-google-maps";
 import styles from "./Components.module.css";
+import ChatModal from "./ChatModal";
 
 export default function Item(props) {
     const { place } = props;
     const [open, setOpen] = useState(false);
-    console.log(place);
+    const [comments, setComments] = useState([]);
+
+    async function getComments() {
+        const request = await fetch(
+            "http://localhost:3000/api/comments/get-comments",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    place_id: place.id,
+                }),
+            }
+        );
+        const data = await request.json();
+
+        console.log(data);
+
+        setComments(data);
+    }
+
+    useEffect(() => {
+        if (open) {
+            getComments();
+        }
+    }, [open]);
+
     return (
         <div className="placeContainer" key={place.id}>
             <AdvancedMarker
@@ -33,6 +61,9 @@ export default function Item(props) {
                         </div>
                         <div className={styles.locationContent}>
                             <p>{`Adress: ${place.address}`}</p>
+                        </div>
+                        <div className={styles.commentBox}>
+                            <ChatModal comments={comments} placeId={place.id} />
                         </div>
                     </div>
                 </InfoWindow>
