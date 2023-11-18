@@ -1,0 +1,30 @@
+@import url("../../index.css");
+
+.mapController {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+}
+
+.MapToggleButton {
+  background-color: var(--secondary);
+  padding: 1rem 0rem;
+}
+
+.MapToggleButton:first-of-type {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.MapToggleButton:last-of-type {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.active {
+  background-color: black;
+}
+
+.defaultLocation {
+  font-size: 0.8rem;
+  margin: 0.4rem;
+}

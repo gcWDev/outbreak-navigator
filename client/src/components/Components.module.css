@@ -1,0 +1,10 @@
+.infoWindowContainer {
+    max-width: 300px;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.infoWindowContainer img {
+    max-height: 200px;
+}
