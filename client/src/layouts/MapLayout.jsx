@@ -14,6 +14,8 @@ export default function MapLayout() {
     const [filterSet, setFiltersSet] = useState(filters);
     const [selectedFilters, setSelectedFilters] = useState(filterSet);
 
+    const [filterStatus, setFilterStatus] = useState(null);
+
     // useEffect(()=>{
     //   async function getFilters(){
     //     const url = "http://localhost:3000/api/get-filters"
@@ -32,9 +34,15 @@ export default function MapLayout() {
                 setCoordinates={setCoordinates}
                 filterSet={filterSet}
                 setSelectedFilters={setSelectedFilters}
+                isFilterEnabled={filterStatus}
             />
             <Outlet
-                context={{ coordinates, setCoordinates, selectedFilters }}
+                context={{
+                    coordinates,
+                    setCoordinates,
+                    selectedFilters,
+                    setFilterStatus,
+                }}
             />
         </div>
     );

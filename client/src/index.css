@@ -13,7 +13,7 @@
     /* font-family: "Space Grotesk", sans-serif; */
     /* font-family: 'Montserrat', sans-serif; */
     /* font-family: "Playfair Display", serif; */
-    font-family: "Noto Serif", serif;
+    font-family: "Noto Serif", serif !important;
 }
 
 body {

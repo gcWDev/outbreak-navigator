@@ -5,7 +5,10 @@ import places from "../../utilities/places";
 import { useOutletContext } from "react-router-dom";
 
 export default function PlacesMap() {
-    const { coordinates, setCoordinates, selectedFilters } = useOutletContext();
+    const { coordinates, setCoordinates, selectedFilters, setFilterStatus } =
+        useOutletContext();
+
+    setFilterStatus(true);
 
     // const [places, setPlaces] = useState([]);
 
@@ -29,8 +32,6 @@ export default function PlacesMap() {
 
     //     getPlaces();
     // }, [coordinates]);
-
-    console.log(coordinates);
 
     function onMarkerDragEnd(e) {
         setCoordinates({ lat: e.latLng.lat(), lng: e.latLng.lng() });

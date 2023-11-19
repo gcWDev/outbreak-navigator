@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./MapController.module.css";
 import { NavLink } from "react-router-dom";
 import PlacesAutocomplte from "../../components/PlacesAutocomplete";
@@ -10,7 +10,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EastIcon from "@mui/icons-material/East";
 
 export default function MapController(props) {
-    const { setCoordinates, filterSet, setSelectedFilters } = props;
+    const { isFilterEnabled, setCoordinates, filterSet, setSelectedFilters } =
+        props;
 
     return (
         <div
@@ -69,6 +70,7 @@ export default function MapController(props) {
                             <Filter
                                 filterSet={filterSet}
                                 setSelectedFilters={setSelectedFilters}
+                                isFilterEnabled={isFilterEnabled}
                             />
                         </div>
                     </div>

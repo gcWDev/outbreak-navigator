@@ -12,7 +12,9 @@ const mapContainerStyle = {
 export default function DensityMap() {
     const data = useOutletContext();
 
-    const { coordinates, setCoordinates } = data;
+    const { coordinates, setCoordinates, setFilterStatus } = data;
+
+    setFilterStatus(false);
 
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: import.meta.env.VITE_GOOGLE_API_KEY,
@@ -34,8 +36,6 @@ export default function DensityMap() {
 
         setCoordinates(newCoordinates);
     }
-
-    console.log(coordinates);
 
     return (
         <div
