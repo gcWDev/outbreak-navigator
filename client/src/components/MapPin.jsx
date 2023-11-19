@@ -23,8 +23,6 @@ export default function Item(props) {
         );
         const data = await request.json();
 
-        console.log(data);
-
         setComments(data);
     }
 
