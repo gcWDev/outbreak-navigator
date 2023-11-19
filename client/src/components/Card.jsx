@@ -10,7 +10,7 @@ export default function Card(props) {
             className={`text-center ${styles.cardContainer}  d-flex flex-column align-items-center`}
         >
             <NavLink to={link}>
-                {img && <img src={img} className="img-fluid" />}
+                {img && <img src={img} className="img-fluid " />}
             </NavLink>
             <div className={img ? "d-flex flex-column" : null}>
                 <h3 className="text-center">{heading}</h3>

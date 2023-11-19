@@ -3,6 +3,9 @@
 .navContainer {
     box-shadow: var(--box-shadow);
     color: var(--text);
+    width: 99.1vw;
+    position: absolute;
+    left: 0px;
 }
 
 .navContainer h3 {

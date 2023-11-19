@@ -37,7 +37,9 @@ export default function Hero() {
                         </div>
                         <div className={`d-flex`}>
                             <button className="primary-btn">Learn More</button>
-                            <button className="secondary-btn mx-3">FAQ</button>
+                            <button className="secondary-btn mx-3">
+                                Try it Now
+                            </button>
                         </div>
                     </div>
                 </div>

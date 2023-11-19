@@ -5,9 +5,10 @@ import filters from "../utilities/filters";
 
 export default function MapLayout() {
     const [coordinates, setCoordinates] = useState({
-        lat: 43.6590384,
-        lng: -79.38835859999999,
+        lat: 43.661026,
+        lng: -79.379895,
     });
+
     //Im making a filters end point to avoid having to manually sync
     //the place type filters on the client whenever
     //I change them on the server
