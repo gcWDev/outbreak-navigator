@@ -3,7 +3,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 
 export default function Filter(props) {
-    const { filterSet, setSelectedFilters } = props;
+    const { filterSet, setSelectedFilters, isFilterEnabled } = props;
 
     const filterArr = Array.from(filterSet).map((item) =>
         item
@@ -33,10 +33,11 @@ export default function Filter(props) {
             renderInput={(params) => (
                 <TextField
                     {...params}
-                    label="Filter by Place Type"
+                    label="Filter by place type"
                     placeholder="Favorites"
                 />
             )}
+            disabled={!isFilterEnabled}
         />
     );
 }

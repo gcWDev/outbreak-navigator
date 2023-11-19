@@ -1,0 +1,27 @@
+@import url("../../../index.css");
+
+.heroContainer {
+    margin: 7.5rem 0rem;
+    width: 100%;
+}
+
+.heroContainer > div {
+    width: 100%;
+}
+
+.heroContainer > div > h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 0px;
+    color: var(--text);
+}
+
+.heroContainer > div > p {
+    color: var(--background);
+}
+
+.particlesBgContainer {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}

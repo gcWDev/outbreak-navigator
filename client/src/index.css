@@ -1,19 +1,43 @@
 :root {
-    --text: #000000;
-    --background: #e1f5ff;
-    --primary: #8ad8fe;
-    --secondary: #c2eaff;
-    --accent: #01a3f4;
+    --text: #000405;
+    --background: #f0fbfe;
+    --primary: #6ed7f7;
+    --secondary: #c5effc;
+    --accent: #f58814;
+    /* --accent: #0cb5e9; */
     --box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.25);
     --active-button: #d8e7f0;
 }
 
 * {
     box-sizing: border-box;
+    /* font-family: "Space Grotesk", sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: "Playfair Display", serif; */
+    font-family: "Noto Serif", serif !important;
 }
 
 body {
-    background-color: var(--background);
+    /* background-color: var(--background); */
+    background-image: url("./assets/bg3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+p,
+.h1 {
+    color: var(--071d2c);
 }
 
 .primary-btn,
@@ -23,15 +47,29 @@ body {
     padding: 0.7rem 0rem;
     border: none;
     box-shadow: var(--box-shadow);
+    color: var(--text);
+    transition: all 0.3s;
 }
 
 .primary-btn {
     background-color: var(--primary);
-    color: var(--background);
+    /* color: var(--background); */
+}
+
+.primary-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary);
+    color: var(--text);
 }
 
 .secondary-btn {
     background-color: var(--secondary);
+}
+
+.secondary-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--primary);
+    /* color: var(--secondary); */
 }
 
 ul {
@@ -55,4 +93,34 @@ body > reach-portal > div {
 
 p {
     margin-bottom: 0;
+}
+
+.particles-container {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+
+.bullet {
+    position: relative;
+}
+
+.bullet::before {
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    content: " ";
+    position: absolute;
+    left: -19.5px;
+    top: 9px;
+    /* box-shadow: var(--box-shadow); */
+}
+
+.Typewriter {
+    display: inline;
+}
+
+span {
+    color: var(--accent);
 }

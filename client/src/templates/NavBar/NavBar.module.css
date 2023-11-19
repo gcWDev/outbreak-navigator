@@ -1,0 +1,50 @@
+@import url("../../index.css");
+
+.navContainer {
+    box-shadow: var(--box-shadow);
+    color: var(--text);
+}
+
+.navContainer h3 {
+    font-weight: 700;
+}
+
+.navButtons {
+    border-radius: 10px;
+    /* background-color: var(--secondary); */
+    padding: 0.3rem 0.5rem;
+    min-width: 125px;
+    text-align: center;
+    /* box-shadow: var(--box-shadow); */
+    color: var(--text);
+    /* color: #676e78; */
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    /* border: thin solid var(--text); */
+    border: thin solid #676e78;
+}
+
+.navButtons:hover {
+    transform: scale(1.05);
+    background-color: var(--background);
+    border: unset;
+    box-shadow: var(--box-shadow);
+}
+/* 
+.navButtons:last-of-type {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.navButtons:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+    color: var(--background);
+}
+
+.navButtons:last-of-type:hover {
+    background-color: var(--background);
+    color: var(--text);
+    transform: scale(1.05);
+} */

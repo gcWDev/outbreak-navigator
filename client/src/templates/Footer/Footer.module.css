@@ -1,0 +1,5 @@
+@import url("../../index.css");
+
+.footerContainer {
+    background-color: var(--primary);
+}

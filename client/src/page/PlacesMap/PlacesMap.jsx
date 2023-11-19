@@ -5,7 +5,10 @@ import places from "../../utilities/places";
 import { useOutletContext } from "react-router-dom";
 
 export default function PlacesMap() {
-    const { coordinates, setCoordinates, selectedFilters } = useOutletContext();
+    const { coordinates, setCoordinates, selectedFilters, setFilterStatus } =
+        useOutletContext();
+
+    setFilterStatus(true);
 
     // const [places, setPlaces] = useState([]);
 
@@ -47,13 +50,17 @@ export default function PlacesMap() {
         });
 
     return (
-        <APIProvider apiKey="AIzaSyCYbNVTuBnquZpuLXBzfyBxWvSvz2sGGRo">
+        <APIProvider apiKey={import.meta.env.VITE_GOOGLE_API_KEY}>
             <div
                 style={{ height: "100vh", width: "100vw" }}
                 id="container"
                 className="position-absolute start-0"
             >
-                <Map zoom={14} center={coordinates} mapId="b6001d79d8112209">
+                <Map
+                    zoom={14}
+                    center={coordinates}
+                    mapId={import.meta.env.VITE_MAP_ID}
+                >
                     {elementArr}
                     <div className="z-3">
                         <Marker

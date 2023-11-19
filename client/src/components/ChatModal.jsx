@@ -6,8 +6,7 @@ import styles from "./Components.module.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SendIcon from "@mui/icons-material/Send";
 import TextField from "@mui/material/TextField";
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
+import ChatIcon from "@mui/icons-material/Chat";
 
 export default function BasicModal(props) {
     const [open, setOpen] = useState(false);
@@ -82,7 +81,9 @@ export default function BasicModal(props) {
 
     return (
         <div>
-            <Button onClick={handleOpen}>Open modal</Button>
+            <Button onClick={handleOpen} className={styles.modalButton}>
+                <ChatIcon /> Open location logs
+            </Button>
             <Modal
                 open={open}
                 onClose={handleClose}
