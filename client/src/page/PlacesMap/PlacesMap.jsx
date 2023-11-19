@@ -47,7 +47,7 @@ export default function PlacesMap() {
         });
 
     return (
-        <APIProvider apiKey="AIzaSyCYbNVTuBnquZpuLXBzfyBxWvSvz2sGGRo">
+        <APIProvider apiKey={import.meta.env.VITE_GOOGLE_API_KEY}>
             <div
                 style={{ height: "100vh", width: "100vw" }}
                 id="container"

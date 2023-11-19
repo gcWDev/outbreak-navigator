@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Hero.module.css";
 import mockups from "../../../assets/mockups.svg";
 import ParticlesBg from "particles-bg";
+import Typewriter from "typewriter-effect";
 
 export default function Hero() {
     return (
@@ -13,13 +14,25 @@ export default function Hero() {
                     <div className="d-flex flex-column gap-5">
                         <div className="d-flex flex-column gap-2">
                             <h1 className={styles.heroHeading}>
-                                Do You have a <span>plan</span> for the next{" "}
-                                <span>virus?</span>
+                                Do you have a <span>plan</span> for the next{" "}
+                                <span className="d-inline">
+                                    <Typewriter
+                                        options={{
+                                            strings: [
+                                                "virus?",
+                                                "pandemic?",
+                                                "outbreak?",
+                                            ],
+                                            autoStart: true,
+                                            loop: true,
+                                        }}
+                                    />
+                                </span>
                             </h1>
                             <p>
                                 A resourseful survival map powered by varius
-                                Google APIs to guide you in case society
-                                collapses.
+                                Google APIs to guide you in the case of a
+                                society collapse.
                             </p>
                         </div>
                         <div className={`d-flex`}>

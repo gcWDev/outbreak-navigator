@@ -115,3 +115,7 @@ p {
     top: 9px;
     /* box-shadow: var(--box-shadow); */
 }
+
+.Typewriter {
+    display: inline;
+}

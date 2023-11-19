@@ -5,6 +5,7 @@ import PlacesAutocomplte from "../../components/PlacesAutocomplete";
 import DefaultOptions from "./DefaultOptions";
 import defaultPlaces from "../../utilities/defaultPlaces";
 import Filter from "./Filter";
+import MuiAutofill from "../../components/MuiAutofill";
 
 export default function MapController(props) {
     const { setCoordinates, filterSet, setSelectedFilters } = props;

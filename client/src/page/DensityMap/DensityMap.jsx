@@ -35,6 +35,8 @@ export default function DensityMap() {
         setCoordinates(newCoordinates);
     }
 
+    console.log(coordinates);
+
     return (
         <div
             style={{ height: "100vh", width: "100vw" }}
