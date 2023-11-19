@@ -3,7 +3,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 
 export default function Filter(props) {
-    const { filterSet, setSelectedFilters, isFilterEnabled } = props;
+    const { filterSet, setSelectedFilters } = props;
 
     const filterArr = Array.from(filterSet).map((item) =>
         item
@@ -37,7 +37,6 @@ export default function Filter(props) {
                     placeholder="Favorites"
                 />
             )}
-            disabled={!isFilterEnabled}
         />
     );
 }

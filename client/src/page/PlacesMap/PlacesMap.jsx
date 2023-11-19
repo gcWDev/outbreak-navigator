@@ -5,33 +5,30 @@ import places from "../../utilities/places";
 import { useOutletContext } from "react-router-dom";
 
 export default function PlacesMap() {
-    const { coordinates, setCoordinates, selectedFilters, setFilterStatus } =
-        useOutletContext();
+    const { coordinates, setCoordinates, selectedFilters } = useOutletContext();
 
-    setFilterStatus(true);
+    const [places, setPlaces] = useState([]);
 
-    // const [places, setPlaces] = useState([]);
+    useEffect(() => {
+        async function getPlaces() {
+            const url = "http://localhost:3000/api/places/get-places";
 
-    // useEffect(() => {
-    //     async function getPlaces() {
-    //         const url = "http://localhost:3000/api/places/get-places";
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    coordinates: coordinates,
+                }),
+            });
+            const data = await response.json();
 
-    //         const response = await fetch(url, {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify({
-    //                 coordinates: coordinates,
-    //             }),
-    //         });
-    //         const data = await response.json();
+            setPlaces(data);
+        }
 
-    //         setPlaces(data);
-    //     }
-
-    //     getPlaces();
-    // }, [coordinates]);
+        getPlaces();
+    }, [coordinates]);
 
     function onMarkerDragEnd(e) {
         setCoordinates({ lat: e.latLng.lat(), lng: e.latLng.lng() });

@@ -8,10 +8,11 @@ import Filter from "./Filter";
 import MuiAutofill from "../../components/MuiAutofill";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EastIcon from "@mui/icons-material/East";
+import { useLocation } from "react-router-dom";
 
 export default function MapController(props) {
-    const { isFilterEnabled, setCoordinates, filterSet, setSelectedFilters } =
-        props;
+    const { setCoordinates, filterSet, setSelectedFilters } = props;
+    const { pathname } = useLocation();
 
     return (
         <div
@@ -65,15 +66,16 @@ export default function MapController(props) {
                             <MuiAutofill setCoordinates={setCoordinates} />
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-12">
-                            <Filter
-                                filterSet={filterSet}
-                                setSelectedFilters={setSelectedFilters}
-                                isFilterEnabled={isFilterEnabled}
-                            />
+                    {pathname == "/places" ? (
+                        <div className="row">
+                            <div className="col-12">
+                                <Filter
+                                    filterSet={filterSet}
+                                    setSelectedFilters={setSelectedFilters}
+                                />
+                            </div>
                         </div>
-                    </div>
+                    ) : null}
                     <div className="row">
                         <div
                             className={`col-12 ${styles.exitContainer} d-flex flex-column gap-2 align-items-center p-3`}

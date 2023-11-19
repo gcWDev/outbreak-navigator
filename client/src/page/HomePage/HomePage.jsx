@@ -24,7 +24,7 @@ export default function HomePage() {
             <div className="row">
                 <Demos />
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }
