@@ -108,7 +108,6 @@ export default function MuiAutofill(props) {
     return (
         <Autocomplete
             id="google-map-demo"
-            sx={{ width: 300 }}
             getOptionLabel={(option) =>
                 typeof option === "string" ? option : option.description
             }
@@ -124,7 +123,7 @@ export default function MuiAutofill(props) {
                 setInputValue(newInputValue);
             }}
             renderInput={(params) => (
-                <TextField {...params} label="Add a location" fullWidth />
+                <TextField {...params} label="Find a location" fullWidth />
             )}
             renderOption={(props, option) => {
                 const matches =

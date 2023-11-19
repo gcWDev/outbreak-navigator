@@ -33,7 +33,7 @@ export default function Filter(props) {
             renderInput={(params) => (
                 <TextField
                     {...params}
-                    label="Filter by Place Type"
+                    label="Filter by place type"
                     placeholder="Favorites"
                 />
             )}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AdvancedMarker, InfoWindow } from "@vis.gl/react-google-maps";
 import styles from "./Components.module.css";
 import ChatModal from "./ChatModal";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export default function Item(props) {
     const { place } = props;
@@ -32,6 +33,13 @@ export default function Item(props) {
         }
     }, [open]);
 
+    function formatType(type) {
+        return type
+            .split("_")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+    }
+
     return (
         <div className="placeContainer" key={place.id}>
             <AdvancedMarker
@@ -51,17 +59,26 @@ export default function Item(props) {
                             alt={`Photo of ${place.name}`}
                             className="img-fluid"
                         />
-                        <div className="py-2 ">
-                            <h3 style={{ color: "black" }}>{place.name}</h3>
-                            <p className="lead pb-3 border-bottom">
-                                {place.primary_type}
-                            </p>
-                        </div>
-                        <div className={styles.locationContent}>
-                            <p>{`Adress: ${place.address}`}</p>
-                        </div>
-                        <div className={styles.commentBox}>
-                            <ChatModal comments={comments} placeId={place.id} />
+                        <div>
+                            <div className="py-2 ">
+                                <h3 style={{ color: "black" }}>{place.name}</h3>
+                                <p className="lead pb-3 border-bottom">
+                                    {formatType(place.primary_type)}
+                                </p>
+                            </div>
+                            <div className="d-flex flex-column gap-3 mt-2">
+                                <div className={styles.locationContent}>
+                                    <p className="d-flex align-items-center gap-2">
+                                        <LocationOnIcon /> {`${place.address}`}
+                                    </p>
+                                </div>
+                                <div className={styles.commentBox}>
+                                    <ChatModal
+                                        comments={comments}
+                                        placeId={place.id}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </InfoWindow>

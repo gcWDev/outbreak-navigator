@@ -1,20 +1,24 @@
 @import url("../index.css");
 
 .infoWindowContainer {
-    max-width: 300px;
-    max-height: 400px;
     overflow-x: hidden;
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
 }
 
 .infoWindowContainer img {
     max-height: 200px;
+    width: 230px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
 }
 
-.modalContainer {
-    max-height: 400px;
-    overflow-y: scroll;
+.infoWindowContainer svg {
+    fill: #1a73e8;
 }
+
 .modalContainer::-webkit-scrollbar {
     width: 0.4em;
     height: 0.4em;
@@ -145,4 +149,17 @@
 
 .cardContainer img:hover {
     transform: scale(0.9);
+}
+
+.modalButton {
+    color: #1a73e8 !important;
+    font-family: "Noto Serif", serif !important;
+    font-size: 13px !important;
+    padding: 0rem !important;
+    display: flex;
+    align-items: center;
+}
+
+.modalButton svg {
+    margin-right: 0.5rem;
 }

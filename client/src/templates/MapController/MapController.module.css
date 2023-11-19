@@ -3,13 +3,29 @@
 .mapController {
     position: absolute;
     left: 10px;
-    top: 75px;
+    top: 10px;
     z-index: 1;
+    width: 280px;
 }
 
 .MapToggleButton {
-    background-color: var(--secondary);
-    padding: 1rem 0rem;
+    background-color: #ededed;
+    padding: 0.75rem 0rem;
+    text-decoration: none;
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.active,
+.MapToggleButton:hover {
+    border-radius: 5px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .MapToggleButton:first-of-type {
@@ -20,11 +36,36 @@
     border-radius: 0px 10px 10px 0px;
 }
 
-.active {
-    background-color: black;
-}
-
 .defaultLocation {
     font-size: 0.8rem;
-    margin: 0.4rem;
+    transition: text-decoration 0.15s, color 0.3s;
+    cursor: pointer;
+}
+
+.defaultLocation:hover {
+    color: #1a73e8;
+    text-decoration: underline;
+}
+
+.exitContainer {
+    background-color: #f6f7f8;
+    border-radius: 10px;
+}
+
+.exitContainer p:last-child {
+    font-size: 0.75rem;
+}
+
+.logOutBtn {
+    border: thin solid #676e78;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.5rem 0rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s;
+}
+
+.logOutBtn:hover {
+    transform: scale(1.03);
 }
