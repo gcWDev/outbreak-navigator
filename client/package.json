@@ -25,6 +25,7 @@
     "react-dom": "^18.2.0",
     "react-globe.gl": "^2.27.0",
     "react-router-dom": "^6.19.0",
+    "react-spinners": "^0.13.8",
     "typewriter-effect": "^2.21.0",
     "use-places-autocomplete": "^4.0.1"
   },

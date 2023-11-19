@@ -51,7 +51,7 @@ export default function About() {
         </div> */}
                 <div className={`col-5 particles-container position-relative`}>
                     <ParticlesBg
-                        color="#6ed7f7"
+                        color="#f58814"
                         num={30}
                         type="tadpole"
                         bg={true}
