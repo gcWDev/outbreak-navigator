@@ -30,6 +30,8 @@ export default function PlacesMap() {
     //     getPlaces();
     // }, [coordinates]);
 
+    console.log(coordinates);
+
     function onMarkerDragEnd(e) {
         setCoordinates({ lat: e.latLng.lat(), lng: e.latLng.lng() });
     }

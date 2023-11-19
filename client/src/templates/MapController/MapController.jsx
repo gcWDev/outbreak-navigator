@@ -55,9 +55,10 @@ export default function MapController(props) {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <PlacesAutocomplte
+                            {/* <PlacesAutocomplte
                                 setCoordinates={setCoordinates}
-                            />
+                            /> */}
+                            <MuiAutofill setCoordinates={setCoordinates} />
                         </div>
                     </div>
                     <div className="row">

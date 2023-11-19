@@ -7,9 +7,8 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import parse from "autosuggest-highlight/parse";
 import { debounce } from "@mui/material/utils";
+import { getGeocode, getLatLng } from "use-places-autocomplete";
 
-// This key was created specifically for the demo in mui.com.
-// You need to create a new one for your application.
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 function loadScript(src, position, id) {
@@ -26,11 +25,13 @@ function loadScript(src, position, id) {
 
 const autocompleteService = { current: null };
 
-export default function MuiAutofill() {
+export default function MuiAutofill(props) {
     const [value, setValue] = React.useState(null);
     const [inputValue, setInputValue] = React.useState("");
     const [options, setOptions] = React.useState([]);
     const loaded = React.useRef(false);
+
+    const { setCoordinates } = props;
 
     if (typeof window !== "undefined" && !loaded.current) {
         if (!document.querySelector("#google-maps")) {
@@ -92,6 +93,18 @@ export default function MuiAutofill() {
         };
     }, [value, inputValue, fetch]);
 
+    async function handleSelect(event, newValue) {
+        setOptions(newValue ? [newValue, ...options] : options);
+        setValue(newValue);
+
+        console.log();
+
+        const results = await getGeocode({ address: newValue.description });
+        const { lat, lng } = await getLatLng(results[0]);
+
+        setCoordinates({ lat, lng });
+    }
+
     return (
         <Autocomplete
             id="google-map-demo"
@@ -106,10 +119,7 @@ export default function MuiAutofill() {
             filterSelectedOptions
             value={value}
             noOptionsText="No locations"
-            onChange={(event, newValue) => {
-                setOptions(newValue ? [newValue, ...options] : options);
-                setValue(newValue);
-            }}
+            onChange={handleSelect}
             onInputChange={(event, newInputValue) => {
                 setInputValue(newInputValue);
             }}
