@@ -8,10 +8,7 @@ const client = new Client({});
 const apiKey = process.env.API_KEY;
 
 async function placesController(req, res) {
-    const coordinates = {
-        lat: 43.6590384,
-        lng: -79.38835859999999,
-    };
+    const { coordinates } = req.body;
 
     const placesPromises = placeTypes.map((type) => {
         return genericSearch(coordinates, type, client, apiKey);

@@ -10,17 +10,24 @@ export default function PlacesMap() {
     // const [places, setPlaces] = useState([]);
 
     // useEffect(() => {
-    //   async function getPlaces() {
-    //     const url = new URL("http://localhost:3000/api/get-places");
-    //     url.searchParams.append("coordinates", coordinates);
+    //     async function getPlaces() {
+    //         const url = "http://localhost:3000/api/places/get-places";
 
-    //     const response = await fetch(url);
-    //     const data = await response.json();
+    //         const response = await fetch(url, {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //             body: JSON.stringify({
+    //                 coordinates: coordinates,
+    //             }),
+    //         });
+    //         const data = await response.json();
 
-    //     setPlaces(data);
-    //   }
+    //         setPlaces(data);
+    //     }
 
-    //   getPlaces();
+    //     getPlaces();
     // }, [coordinates]);
 
     function onMarkerDragEnd(e) {
