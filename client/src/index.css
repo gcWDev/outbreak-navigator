@@ -121,6 +121,15 @@ p {
     display: inline;
 }
 
-span {
+section span {
     color: var(--accent);
+}
+
+.autocomplete-box {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    line-height: 1.4375em !important;
+    padding: 9px !important;
+    border-radius: 4px !important;
+    border: thin solid #c4c4c4;
 }

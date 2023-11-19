@@ -5,10 +5,7 @@ import places from "../../utilities/places";
 import { useOutletContext } from "react-router-dom";
 
 export default function PlacesMap() {
-    const { coordinates, setCoordinates, selectedFilters, setFilterStatus } =
-        useOutletContext();
-
-    setFilterStatus(true);
+    const { coordinates, setCoordinates, selectedFilters } = useOutletContext();
 
     // const [places, setPlaces] = useState([]);
 

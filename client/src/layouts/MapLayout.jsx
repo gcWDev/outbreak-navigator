@@ -14,7 +14,7 @@ export default function MapLayout() {
     const [filterSet, setFiltersSet] = useState(filters);
     const [selectedFilters, setSelectedFilters] = useState(filterSet);
 
-    const [filterStatus, setFilterStatus] = useState(null);
+    // const [filterStatus, setFilterStatus] = useState(null);
 
     // useEffect(()=>{
     //   async function getFilters(){
@@ -34,14 +34,14 @@ export default function MapLayout() {
                 setCoordinates={setCoordinates}
                 filterSet={filterSet}
                 setSelectedFilters={setSelectedFilters}
-                isFilterEnabled={filterStatus}
+                // isFilterEnabled={filterStatus}
             />
             <Outlet
                 context={{
                     coordinates,
                     setCoordinates,
                     selectedFilters,
-                    setFilterStatus,
+                    // setFilterStatus,
                 }}
             />
         </div>
