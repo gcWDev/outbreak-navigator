@@ -53,7 +53,11 @@ export default function PlacesMap() {
                 id="container"
                 className="position-absolute start-0"
             >
-                <Map zoom={14} center={coordinates} mapId="b6001d79d8112209">
+                <Map
+                    zoom={14}
+                    center={coordinates}
+                    mapId={import.meta.env.VITE_MAP_ID}
+                >
                     {elementArr}
                     <div className="z-3">
                         <Marker

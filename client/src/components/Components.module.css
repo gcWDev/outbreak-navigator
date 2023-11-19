@@ -109,3 +109,40 @@
     fill: #0084ff;
     transform: scale(1.3);
 }
+
+.cardContainer h3 {
+    font-size: 1.25rem;
+}
+
+.cardContainer p {
+    font-size: 1rem;
+}
+
+.cardContainer > a:first-child {
+    cursor: unset;
+}
+
+.cardContainer a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    width: fit-content;
+}
+
+.cardContainer a:hover {
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.cardContainer img {
+    border-radius: 10px;
+    border: thin solid #676e78;
+    transition: all 0.3s;
+    transform: scale(0.85);
+    cursor: pointer;
+}
+
+.cardContainer img:hover {
+    transform: scale(0.9);
+}

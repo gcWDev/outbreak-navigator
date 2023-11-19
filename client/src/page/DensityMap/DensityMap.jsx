@@ -47,7 +47,7 @@ export default function DensityMap() {
                 zoom={10}
                 onLoad={onMapLoad}
                 options={{
-                    mapId: "b6001d79d8112209",
+                    mapId: import.meta.env.VITE_MAP_ID,
                 }}
             >
                 <Marker
