@@ -30,25 +30,26 @@ Outbreak Navigator is an interactive map web application designed to provide rea
 
 ### Danger Zone Map
 
-GeoJSON Data Utilization: Indicates high-risk areas due to population density.
-Polygon Objects: Mark danger zones on the map.
+#### GeoJSON Data Utilization
+
+-   Populates the map with GeoJSON polygons based on worldwide population density data.
+    ![Danger zone map](./gallery/danger-zone-map.png)
 
 ## General Features
 
-Default Locations: Includes places like the OSU campus, Googleplex offices, and major stores in Japan.
-Drag and Drop: Functional map pins for easy navigation.
-Autocomplete Feature: For searching any global address.
+-   Default Locations: Includes places like the OSU campus, Googleplex offices, and major stores in Japan.
+-   Drag and Drop: Functional map pins for easy navigation.
+-   Autocomplete Feature: For searching any global address.
 
 ## Technology Stack
 
-Frontend: React, Material UI, Bootstrap
-Backend: Node.js, Express.js
-APIs: Google Places, Google Maps, Google Geocode
-Database: MySQL
-Tools: Postman, Vite
+-   Frontend: React, Material UI, Bootstrap
+-   Backend: Node.js, Express.js
+-   APIs: Google Places, Google Maps, Google Geocode
+-   Database: MySQL
+-   Tools: Postman, Vite
 
-Future Plans
-The primary focus for future updates includes:
+## Future Plans
 
-Reducing API costs by implementing caching.
-Enhancing data handling for better production efficiency.
+1. Reducing API costs by implementing caching.
+2. Enhancing data handling for better production efficiency.
