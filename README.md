@@ -1,4 +1,6 @@
-# Outbreak Navigator [Hackathon pitch](https://www.youtube.com/watch?v=o4-UrAI2y7U)
+# Outbreak Navigator
+
+[Hackathon pitch](https://www.youtube.com/watch?v=o4-UrAI2y7U)
 
 ## Introduction
 
