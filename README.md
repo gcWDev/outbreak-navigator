@@ -8,10 +8,25 @@ Outbreak Navigator is an interactive map web application designed to provide rea
 
 ### Essential Survival Map
 
-![Server side filtering](./gallery/essential-map.png) - **Initial map state**: The initial map state is based on data filtered on the server from the Google Places API
-![Useful information modal](./gallery/essential-modal.png) - **Places modal**: Each place contains a modal that reflects basic information about the place
-![Crowdsourced user data](./gallery/user-updates.png) - **Crowdsourced user data**: A chat log appears with time stamped information from people at the location
-![Client side filtering](./gallery/client-side-filtering.png) - **Client side filtering**: Users can filter the map further on the client
+#### Initial map state:
+
+-   The initial map state is based on data filtered on the server from the Google Places API
+    ![Server side filtering](./gallery/essential-map.png)
+
+#### Places modal:
+
+-   Each place contains a modal that reflects basic information about the place
+    ![Useful information modal](./gallery/essential-modal.png)
+
+#### Crowdsourced user data:
+
+-   A chat log appears with time stamped information from people at the location
+    ![Crowdsourced user data](./gallery/user-updates.png)
+
+#### Client side filtering:
+
+-   Users can filter the map further on the client
+    ![Client side filtering](./gallery/client-side-filtering.png)
 
 ### Danger Zone Map
 
