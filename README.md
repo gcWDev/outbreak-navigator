@@ -37,17 +37,18 @@ Outbreak Navigator is an interactive map web application designed to provide rea
 
 ## General Features
 
+-   **Autocomplete Feature**: For searching any global address.
+    ![Address autocomplete](./gallery/address-autocomplete.png)
 -   **Default Locations**: Includes places like the OSU campus, Googleplex offices, and major stores in Japan.
 -   **Drag and Drop**: Functional map pins for easy navigation.
--   **Autocomplete Feature**: For searching any global address.
 
 ## Technology Stack
 
--   Frontend: React, Material UI, Bootstrap
--   Backend: Node.js, Express.js
--   APIs: Google Places, Google Maps, Google Geocode
--   Database: MySQL
--   Tools: Postman, Vite
+-   **Frontend**: React, Material UI, Bootstrap
+-   **Backend**: Node.js, Express.js
+-   **APIs**: Google Places, Google Maps, Google Geocode
+-   **Database**: MySQL
+-   **Tools**: Postman, Vite
 
 ## Future Plans
 
