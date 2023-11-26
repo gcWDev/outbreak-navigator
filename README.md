@@ -37,9 +37,9 @@ Outbreak Navigator is an interactive map web application designed to provide rea
 
 ## General Features
 
--   Default Locations: Includes places like the OSU campus, Googleplex offices, and major stores in Japan.
--   Drag and Drop: Functional map pins for easy navigation.
--   Autocomplete Feature: For searching any global address.
+-   **Default Locations**: Includes places like the OSU campus, Googleplex offices, and major stores in Japan.
+-   **Drag and Drop**: Functional map pins for easy navigation.
+-   **Autocomplete Feature**: For searching any global address.
 
 ## Technology Stack
 
